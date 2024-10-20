@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendataan</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Fungsi yang menampilkan pop-up setelah submit
+        function showPopup() {
+            alert("Data berhasil disubmit! Terima kasih telah mengisi formulir.");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Enhypen</h1>
+        <img src="logo enhypen.jpg" alt="Logo Idola" class="logo">
+    </header>
+
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.html">Halaman Utama</a></li>
+            <li><a href="formulir.html">Formulir</a></li>
+            <li><a href="tabel.html">Tabel</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h2>Formulir Pendapat Tentang Enhypen</h2>
+        <form action="tabel.html" method="get" onsubmit="showPopup()">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="tgl_lahir">Tanggal Lahir:</label>
+            <input type="date" id="tgl_lahir" name="tgl_lahir" required>
+
+            <label>Jenis Kelamin:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="Laki-Laki" required> Laki-Laki</label>
+                <label><input type="radio" name="gender" value="Perempuan" required> Perempuan</label>
+            </div>
+
+            <label for="opini">Pendapat Anda:</label>
+            <textarea id="opini" name="opini" rows="4" cols="50" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Enhypen - Hasna Dhiya Azizah.</p>
+    </footer>
+</body>
+</html>
